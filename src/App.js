@@ -1,12 +1,27 @@
 import React from 'react';
 import './styles/app.scss';
-import { Button, Image } from 'react-bootstrap';
+
+import HomeView from './components/Views/HomeView';
+import Nav from './components/Nav/Nav';
+import TopBar from './components/TopBar/TopBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
 
-      <p>text</p>
+      <div className="row">
+        <div className="col topbar">
+          <TopBar />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-1 nav">
+          <Nav />
+        </div>
+        <div className="col-sm-8 views">
+          <HomeView />
+        </div>
+      </div>
 
     </div>
   );
