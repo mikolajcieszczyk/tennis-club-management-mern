@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import 'colorsAndFonts';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $ff-regular;
+    font-weight: $fw-normal;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
