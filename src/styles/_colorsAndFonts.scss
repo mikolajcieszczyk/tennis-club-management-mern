@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 $ff-regular: 'Lato', sans-serif;
+$ff-nonregular: 'Oswald', sans-serif;
 
 $fw-normal: 400;
 $fw-bold: 700;
 $fw-bolder: 900;
+
+$fs-normal: 1rem;
+$fs-big: 1.5rem;
+$fs-bigger: 2rem;
 
 $white: #fff;
 $light-gray: #EEF1F8;
