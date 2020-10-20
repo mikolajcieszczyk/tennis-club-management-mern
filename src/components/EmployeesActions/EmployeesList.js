@@ -16,43 +16,23 @@ const Employee = props => (
     </tr>
 );
 
-let coachesArr = [];
-let office_employeesArr = [];
-
 export default class EmployeesList extends Component {
     constructor() {
         super();
 
         this.deleteEmployee = this.deleteEmployee.bind(this);
-        this.coachesList = this.coachesList.bind(this);
 
         this.state = {
             employees: [],
-            coaches: [],
-            office_employees: [],
-            showEmployees: true,
-            showCoaches: false,
-            showOfficeEmployees: false
         }
     }
 
     componentDidMount() {
         axios.get('http://localhost:5000/employees/')
             .then(res => {
-                for (let i = 0; i < res.data.length; i++) {
-                    if (res.data[i].type.includes("coach")) {
-                        coachesArr.push(res.data[i])
-                    } else if (res.data[i].type.includes("office")) {
-                        office_employeesArr.push(res.data[i])
-                    }
-                }
-
                 this.setState({
                     employees: res.data,
-                    coaches: coachesArr,
-                    office_employees: office_employeesArr
                 })
-
             })
             .catch((error) => {
                 console.log(error.message)
@@ -68,39 +48,16 @@ export default class EmployeesList extends Component {
         })
     }
 
-    coachesList() {
-        this.setState({
-            showCoaches: true
-        })
-
-        console.log(this.state.showCoaches)
-
-        this.EmployeesList();
-    }
-
     EmployeesList() {
-        if (this.state.showEmployees) {
             return this.state.employees.map(currentEmployee => {
                 return <Employee employee={currentEmployee} deleteEmployee={this.deleteEmployee} key={currentEmployee._id} />;
             })
-        } else if (this.state.showCoaches) {
-            return this.state.coaches.map(currentEmployee => {
-                return <Employee employee={currentEmployee} deleteEmployee={this.deleteEmployee} key={currentEmployee._id} />;
-            })
-        } else if (this.state.showOfficeEmployees) {
-            return this.state.office_employees.map(currentEmployee => {
-                return <Employee employee={currentEmployee} deleteEmployee={this.deleteEmployee} key={currentEmployee._id} />;
-            })
-        }
-    }
+        } 
 
     
-
     render() {
         return (
             <div>
-                {/* <Link onClick={this.setState({ showEmployees: true })}>showEmployees</Link> */}
-                <button onClick={this.coachesList}>showCoaches</button>
                 <table className="table">
                     <thead>
                         <tr className="table-header">
