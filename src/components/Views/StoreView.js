@@ -32,7 +32,7 @@ export default class StoreView extends Component {
                             <Route path="/products-list" component={ProductsList} />
                             <Route path="/add-product" component={AddProduct} />
                             <Route path="/edit-product/:id" component={EditProduct} />
-                            <Route path="/products-sold" component={SoldProducts} />
+                            <Route path="/sold-products" component={SoldProducts} />
                         </Switch>
                     </div>
                 </main>

@@ -21,7 +21,6 @@ export default class EditProduct extends Component {
             product_description: '',
             product_condition: '',
             product_price: '',
-            products: [],
             showPopup: false,
             isError: false,
             errorMessage: ''
