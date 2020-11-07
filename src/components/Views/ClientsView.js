@@ -26,9 +26,9 @@ export default class ClientsView extends Component {
                     </div>
                     <div className="main__clients">
                         <Switch>
-                            <Route path="/clients-list" component={ClientsList} />
-                            <Route path="/add-client" component={AddClient} />
-                            <Route path="/edit-client/:id" component={EditClient} />
+                            <Route path="/clients/clients-list" component={ClientsList} />
+                            <Route path="/clients/add-client" component={AddClient} />
+                            <Route path="/clients/edit-client/:id" component={EditClient} />
                         </Switch>
                     </div>
                 </main>

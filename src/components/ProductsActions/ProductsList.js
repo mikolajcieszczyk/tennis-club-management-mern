@@ -5,14 +5,14 @@ import axios from 'axios';
 const Product = props => (
     <tr>
         <td>{props.product.product_name}</td>
-        <td><a href={props.product.product_photo} rel="noopener noreferrer" target="_blank">click</a> </td>
+        <td><a className="product__link" href={props.product.product_photo} rel="noopener noreferrer" target="_blank">click</a> </td>
         <td>{props.product.product_type}</td>
         <td>{props.product.product_condition}</td>
         <td>{props.product.product_price} PLN</td>
 
         <td>
-            <Link to={'/product-details/' + props.product._id}><button className="details-btn" alt="details">DETAILS/SELL</button></Link>
-            <Link to={'/edit-product/' + props.product._id}><button className="edit-btn" alt="edit">EDIT</button></Link>
+            <Link to={'/store/product-details/' + props.product._id}><button className="details-btn" alt="details">DETAILS/SELL</button></Link>
+            <Link to={'/store/edit-product/' + props.product._id}><button className="edit-btn" alt="edit">EDIT</button></Link>
             <button className="delete-btn" alt="delete" onClick={() => { props.deleteProduct(props.product._id) }}>delete</button> 
         </td>
     </tr>

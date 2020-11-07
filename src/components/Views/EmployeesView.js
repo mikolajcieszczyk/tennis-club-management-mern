@@ -26,9 +26,9 @@ export default class EmployeesView extends Component {
                     </div>
                     <div className="main__employees">
                         <Switch>
-                            <Route path="/employees-list" component={EmployeesList} />
-                            <Route path="/add-employee" component={AddEmployee} />
-                            <Route path="/edit-employee/:id" component={EditEmployee} />
+                            <Route path="/employees/employees-list" component={EmployeesList} />
+                            <Route path="/employees/add-employee" component={AddEmployee} />
+                            <Route path="/employees/edit-employee/:id" component={EditEmployee} />
                         </Switch>
                     </div>
                 </main>

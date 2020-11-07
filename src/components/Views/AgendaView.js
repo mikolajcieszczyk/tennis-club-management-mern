@@ -27,10 +27,10 @@ export default class AgendaView extends Component {
                     </div>
                     <div className="main__agenda">
                         <Switch>
-                            <Route exact path="/scheduler" component={Scheduler} />
-                            <Route path="/events-list" component={EventsList} />
-                            <Route path="/add-event" component={AddEvent} />
-                            <Route path="/edit-event/:id" component={EditEvent} />
+                            <Route exact path="/agenda/scheduler" component={Scheduler} />
+                            <Route path="/agenda/events-list" component={EventsList} />
+                            <Route path="/agenda/add-event" component={AddEvent} />
+                            <Route path="/agenda/edit-event/:id" component={EditEvent} />
                         </Switch>
                     </div>
                 </main>

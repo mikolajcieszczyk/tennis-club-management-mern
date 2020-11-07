@@ -82,7 +82,7 @@ export default class ProductDetails extends Component {
             errorMessage: ''
         });
 
-        this.props.history.push('/products-list');
+        this.props.history.push('/store/products-list');
     };
 
 

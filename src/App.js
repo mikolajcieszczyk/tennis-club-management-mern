@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles/app.scss';
 
 import {
@@ -7,8 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import Nav from './components/Nav/Nav';
-import TopBar from './components/TopBar/TopBar';
+import Header from './components/Header/Header';
 import HomeView from './components/Views/HomeView';
 import AgendaView from './components/Views/AgendaView';
 import ClientsView from './components/Views/ClientsView';
@@ -18,25 +17,26 @@ import FinancesView from './components/Views/FinancesView';
 import Footer from './components/Footer/Footer';
 
 
-function App() {
-  return (
-    <div className="App">
-    <Router>
-        <TopBar />
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={HomeView} />
-          <Route path="/agenda" component={AgendaView} />
-          <Route path="/clients" component={ClientsView} />
-          <Route path="/employees" component={EmployeesView} />
-          <Route path="/store" component={StoreView} />
-          <Route path="/finances" component={FinancesView} />
-        </Switch>
-        <Footer />
-    </Router>
-      
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={HomeView} />
+            <Route path="/agenda/events-list" component={AgendaView} />
+            <Route path="/clients/clients-list" component={ClientsView} />
+            <Route path="/employees/employees-list" component={EmployeesView} />
+            <Route path="/store/products-list" component={StoreView} />
+            <Route path="/finances" component={FinancesView} />
+          </Switch>
+          <Footer />
+        </Router>
+
+      </div>
+    );
+  }
 }
 
 export default App;

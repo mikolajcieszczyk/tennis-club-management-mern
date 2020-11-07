@@ -107,7 +107,7 @@ class EditEmployee extends Component {
             errorMessage: ''
         });
 
-        this.props.history.push('/employees-list');
+        this.props.history.push('/employees/employees-list');
     };
 
     onSubmit(e) {

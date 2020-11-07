@@ -11,7 +11,7 @@ const Employee = props => (
         <td>{props.employee.phone}</td>
         <td>{props.employee.email}</td>
         <td>
-            <Link to={'/edit-employee/' + props.employee._id}><button className="edit-btn" alt="edit">EDIT</button></Link>  <button className="delete-btn" alt="delete" onClick={() => { props.deleteEmployee(props.employee._id) }}>delete</button>
+            <Link to={'/employees/edit-employee/' + props.employee._id}><button className="edit-btn" alt="edit">EDIT</button></Link>  <button className="delete-btn" alt="delete" onClick={() => { props.deleteEmployee(props.employee._id) }}>delete</button>
         </td>
     </tr>
 );

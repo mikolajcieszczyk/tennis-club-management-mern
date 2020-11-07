@@ -10,7 +10,7 @@ const Client = props => (
         <td>{props.client.email}</td>
         <td>{props.client.skills}</td>
         <td>
-            <Link to={'/edit-client/' + props.client._id}><button className="edit-btn" alt="edit">EDIT</button></Link>  <button className="delete-btn" alt="delete" onClick={() => { props.deleteClient(props.client._id) }}>delete</button>
+            <Link to={'/clients/edit-client/' + props.client._id}><button className="edit-btn" alt="edit">EDIT</button></Link>  <button className="delete-btn" alt="delete" onClick={() => { props.deleteClient(props.client._id) }}>delete</button>
         </td>
     </tr>
 )

@@ -92,7 +92,7 @@ export default class EditProduct extends Component {
             errorMessage: ''
         });
 
-        this.props.history.push('/products-list');
+        this.props.history.push('/store/products-list');
     };
 
     onSubmit(e) {

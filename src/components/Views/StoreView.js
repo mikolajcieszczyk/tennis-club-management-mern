@@ -28,11 +28,11 @@ export default class StoreView extends Component {
                     </div>
                     <div className="main__products">
                         <Switch>
-                            <Route path="/product-details/:id" component={ProductDetails} />
-                            <Route path="/products-list" component={ProductsList} />
-                            <Route path="/add-product" component={AddProduct} />
-                            <Route path="/edit-product/:id" component={EditProduct} />
-                            <Route path="/sold-products" component={SoldProducts} />
+                            <Route path="/store/product-details/:id" component={ProductDetails} />
+                            <Route path="/store/products-list" component={ProductsList} />
+                            <Route path="/store/add-product" component={AddProduct} />
+                            <Route path="/store/edit-product/:id" component={EditProduct} />
+                            <Route path="/store/sold-products" component={SoldProducts} />
                         </Switch>
                     </div>
                 </main>
