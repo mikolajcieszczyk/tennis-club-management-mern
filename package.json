@@ -19,7 +19,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "cd backend && node index.js",
+    "start": "cd backend && node server.js",
     "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
