@@ -32,6 +32,10 @@
             width: 40px;
             margin-right: 5%;
         }
+
+        span {
+            width: 100%;
+        }
     }
 }
 
@@ -55,10 +59,14 @@
     z-index: 1;
 
     .nav__button {
+        display: flex;
+        flex-direction: column;
+
         color: $white;
         text-decoration: none;
         font-size: 1.2rem;
         text-align: center;
+        padding: 0;
 
         img {
             width: 50px;
@@ -442,6 +450,7 @@
 }
 
 @media (max-width: 575.98px) {
+
     .header,
     .header--scrolled {
         position: sticky;
@@ -453,12 +462,10 @@
             display: block;
             width: 40px;
             height: 40px;
-            margin-left: 8%;
         }
 
         .header__link {
             justify-content: center;
-            width: 100%;
             font-size: 1.5rem;
 
             .logo {
@@ -487,5 +494,22 @@
 
     .nav--hidden {
         display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .header,
+    .header--scrolled {
+        .header__link {
+            width: 50%;
+        }
+    }
+
+    .nav,
+    .nav--hidden {
+        .nav__button {
+            padding: 5px;
+        }
     }
 }
