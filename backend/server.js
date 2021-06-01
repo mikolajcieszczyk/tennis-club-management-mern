@@ -30,6 +30,7 @@ app.use('/employees', employeesRouter);
 app.use('/products', productsRouter);
 app.use('/soldProducts', soldProductsRouter);
 
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
